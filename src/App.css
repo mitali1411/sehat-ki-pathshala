@@ -1,0 +1,237 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* General Styles */
+:root {
+  --primary-color: #9ba329;
+  --secondary-color: #f6f6d1;
+  --accent-color: #c8cf4c;
+  --dark-color: #24290a;
+  --light-color: #fbfaea;
+  --medium-color: #666e1d;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.top-bar {
+  font-size: 0.9rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  width: 100%;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+/* .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+} */
+
+/* Hero Section Styles */
+.hero-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+  width: 100%;
+  height: 90vh;
+  color: var(--light-color);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.hero-section img{
+  height: 550px;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(36, 41, 10, 0.1);
+  transition: transform 0.3s ease;
+  background-color: var(--light-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Feature Icons */
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--light-color) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: var(--medium-color) !important;
+  border-color: var(--medium-color) !important;
+  color: var(--light-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+.link-primary {
+  color: var(--primary-color) !important;
+}
+
+.link-primary:hover {
+  color: var(--medium-color) !important;
+}
+
+/* Custom accent classes */
+.btn-accent {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--dark-color);
+}
+
+.btn-accent:hover {
+  background-color: var(--medium-color);
+  border-color: var(--medium-color);
+  color: var(--light-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+/* Form focus states */
+.form-control:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.25rem rgba(155, 163, 41, 0.25) !important;
+}
+
+/* Navigation active states */
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* List group items */
+.list-group-item.active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--light-color) !important;
+}
+
+/* Progress bars */
+.progress-bar {
+  background-color: var(--primary-color) !important;
+}
+
+/* Pagination */
+.page-item.active .page-link {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--light-color) !important;
+}
+
+.page-link {
+  color: var(--primary-color) !important;
+}
+
+.page-link:hover {
+  color: var(--medium-color) !important;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Contact Form Styles */
+.form-control {
+  padding: 0.75rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.5rem;
+  background-color: var(--light-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
