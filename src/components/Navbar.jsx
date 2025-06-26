@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../src/assets/Logo.png';
 
 const Navbar = () => {
