@@ -1,6 +1,7 @@
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import ContactForm from '../components/ContactForm'
 
 const Contact = () => {
   const handleSubmit = (e) => {
@@ -25,7 +26,7 @@ const Contact = () => {
         <Row>
           <Col md={6} className="mb-4">
             <h2 className="mb-4">Send us a Message</h2>
-            <Form onSubmit={handleSubmit}>
+            {/* <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3">
                 <Form.Label>Full Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter your full name" required />
@@ -54,7 +55,8 @@ const Contact = () => {
               <Button variant="primary" type="submit" className="w-100">
                 Send Message
               </Button>
-            </Form>
+            </Form> */}
+            <ContactForm/>
           </Col>
 
           <Col md={6}>

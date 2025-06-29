@@ -1,32 +1,31 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
+import CountUp from 'react-countup'
+import { Col, Container, Row } from 'react-bootstrap'
 
 const OurImpact = () => {
+  const counter = [
+    { count: 1000, title: 'Success Stories' },
+    { count: 95, title: 'Success Rate' },
+    { count: 50, title: 'Expert Coaches' },
+    { count: 10, title: 'Years Experience' },
+  ]
   return (
-    <>
-    {/* Statistics Section */}
+    <div>
+      <Container>
         <div className="text-center mt-5 pt-5">
           <h2 className="mb-5">Our Impact</h2>
           <Row>
-            <Col md={3} className="mb-4">
-              <div className="h1 text-primary">1000+</div>
-              <div className="text-muted">Success Stories</div>
-            </Col>
-            <Col md={3} className="mb-4">
-              <div className="h1 text-primary">95%</div>
-              <div className="text-muted">Success Rate</div>
-            </Col>
-            <Col md={3} className="mb-4">
-              <div className="h1 text-primary">50+</div>
-              <div className="text-muted">Expert Coaches</div>
-            </Col>
-            <Col md={3} className="mb-4">
-              <div className="h1 text-primary">10+</div>
-              <div className="text-muted">Years Experience</div>
-            </Col>
+            {counter.map((item, index) => 
+            <Col md={3} className="mb-4" key={index}>
+              <div className="h1 text-primary">
+                <CountUp end={item.count} duration={2}/>
+              </div>
+              <div className="text-muted">{item.title}</div>
+            </Col>)}
           </Row>
         </div>
-    </>
+      </Container>
+    </div>
   )
 }
 

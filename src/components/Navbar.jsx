@@ -5,7 +5,7 @@ import Logo from '../../src/assets/Logo.png';
 const Navbar = () => {
   return (
     <>
-      <BootstrapNavbar className='top-0' bg="light" expand="lg" sticky="top">
+      <BootstrapNavbar className='top-0 shadow' bg="light" expand="lg" sticky="top">
         <Container>
           <BootstrapNavbar.Brand as={Link} to="/">
             <img src={Logo} alt="Sehat ki Pathshala" style={{ width: '60px' }} />

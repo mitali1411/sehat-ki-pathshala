@@ -4,10 +4,10 @@ import FsaaiLogo from '../../src/assets/fssai-logo.png'
 
 const HeroSection = () => {
   return (
-      <div className="hero-section bg-primary text-white py-5">
+      <div className="hero-section bg-primary py-5">
         <Container className='d-flex align-items-center justify-content-center flex-column'>
               <img src={Logo} alt="Logo" style={{height:'130px', width:'150px'}} />
-              <h1 className='mt-3 text-center'>Become a Certified Health and Wellness Coach</h1>
+              <h1 className='mt-3 text-center'>Together for a Healthier Tommorow</h1>
               <p className="lead text-center">Transform Lives and Your Income with Health Coach Certification</p>
               <span className='w-25 d-flex align-items-center justify-content-center'>
                 <img src={FsaaiLogo} alt="" style={{width:'100px'}}/>

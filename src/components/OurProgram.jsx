@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 const OurProgram = () => {
   return (
-    <div className="bg-light py-5">
+    <div className="py-5 bg-white">
         <Container>
           <h2 className="text-center mb-5">Our Programs</h2>
           <Row>
