@@ -35,50 +35,26 @@ const Results = () => {
         </Container>
       </div>
 
-      {/* Results Section */}
-      <Container className="py-5">
-        <Row>
-          {results.map((result, index) => (
-            <Col md={4} key={index} className="mb-4">
-              <Card className="h-100 text-center shadow-sm">
-                <div className="p-3">
-                  <div 
-                    className="rounded-circle overflow-hidden mx-auto mb-4 shadow" 
-                    style={{ 
-                      width: '150px', 
-                      height: '150px',
-                      border: '3px solid #0d6efd'
-                    }}
-                  >
-                    <img 
-                      src={result.image} 
-                      alt={result.name}
-                      className="img-fluid"
-                      style={{ 
-                        objectFit: 'cover', 
-                        width: '100%', 
-                        height: '100%' 
-                      }}
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = 'https://via.placeholder.com/150';
-                      }}
-                    />
-                  </div>
-                  <Card.Title className="h4">{result.name}</Card.Title>
-                  <div className="text-primary fw-bold mb-3">{result.achievement}</div>
-                  <Card.Text className="text-muted">
-                    "{result.testimonial}"
-                  </Card.Text>
-                </div>
+ <div className="bg-light py-5">
+        <Container>
+          <Row>
+            {results.map((item, index) => {
+              return(
+                <Col md={4} key={index}>
+                <Card className="text-center mb-4" key={index}>
+                <Card.Img variant="top" src={item.image} style={{height:'400px'}}/>
+                <Card.Body>
+                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Text>{item.testimonial}</Card.Text>
+                </Card.Body>
               </Card>
-            </Col>
-          ))}
-        </Row>
-
-        {/* Statistics Section */}
-        <OurImpact/>
-      </Container>
+          </Col>
+              )
+            })  
+          }
+          </Row>
+        </Container>
+      </div>
 
       {/* Testimonial Banner */}
       <div className="bg-light py-5 mt-4">

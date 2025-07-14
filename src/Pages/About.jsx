@@ -10,9 +10,8 @@ const About = () => {
   ]
 
   const TeamMembers = [
-    {img: "/team-1.jpg", name: "Rajesh Batra", designation: "Founder & Lead Instructor"},
-    {img: "/team-2.jpg", name: "Priya Batra", designation: "Nutrition Expert"},
-    {img: "/team-3.jpg", name: "Karan Batra", designation: "Wellness Coach"},
+    {img: "/team-1.jpg", name: "Deependra Raut", designation: "Founder & Lead Instructor", experience: '11+ years of experience'},
+    {img: "/team-2.jpg", name: "Bhawna Raut", designation: "Co-Founder", experience: '11+ years of experience'},
   ]
   return (
     <>
@@ -56,7 +55,7 @@ const About = () => {
       </Container>
 
       {/* Team Section */}
-      <div className="bg-light py-5">
+      {/* <div className="bg-light py-5">
         <Container>
           <h2 className="text-center mb-5">Our Expert Team</h2>
           <Row>
@@ -76,7 +75,44 @@ const About = () => {
           }
           </Row>
         </Container>
-      </div>
+      </div> */}
+
+           {/* Results Section */}
+      <Container className="py-5">
+        <Row>
+          {TeamMembers.map((team, index) => (
+            <Col md={4} key={index} className="mb-4">
+              <Card className="h-100 text-center shadow-sm bg-white">
+                <div className="p-3">
+                  <div 
+                    className="rounded-circle overflow-hidden mx-auto mb-4 shadow" 
+                    style={{ 
+                      width: '150px', 
+                      height: '150px',
+                      border: '3px solid #3a5808ff'
+                    }}
+                  >
+                    <img src={team.img} alt={team.name}
+                      className="img-fluid" style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = 'https://via.placeholder.com/150';}}
+                    />
+                  </div>
+                  <Card.Title className="h4">{team.name}</Card.Title>
+                  <div className="text-primary text-center fw-bold">{team.designation}</div>
+                  <Card.Text className="text-muted">
+                    {team.experience}
+                  </Card.Text>
+                </div>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+
+        {/* Statistics Section */}
+        {/* <OurImpact/> */}
+      </Container>
     </>
   );
 };

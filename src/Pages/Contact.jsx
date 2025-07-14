@@ -83,7 +83,7 @@ const Contact = () => {
                   <FontAwesomeIcon icon={faEnvelope} className="text-primary me-3" size="2x" />
                   <div>
                     <h5 className="mb-1">Email</h5>
-                    <p className="mb-0">info@sehatkipathshala.com</p>
+                    <p className="mb-0">sehatkipathshala@gmail.com</p>
                   </div>
                 </div>
               </Card.Body>
@@ -93,12 +93,7 @@ const Contact = () => {
             <div className="mt-4">
               <h5 className="mb-3">Find us on Map</h5>
               <div className="ratio ratio-16x9">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2061541753424!2d77.09292931492145!3d28.459044982486377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18c1b6d1a35d%3A0x9c1c0c5b7c0d0c1a!2sGolf%20Course%20Rd%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1625641230000!5m2!1sen!2sin"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.330600080844!2d75.90631607508222!3d22.715950279389823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962e3aa1b5c71e7%3A0x41d731f20524dada!2sSehat%20Ki%20Pathshala%20-%20Deep&#39;s%20Weight%20Loss%20%26%20Lifestyle%20Coach!5e0!3m2!1sen!2sin!4v1752476984316!5m2!1sen!2sin" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </Col>

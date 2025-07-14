@@ -1,154 +1,58 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faLocation } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import Logo from '../assets/Logo.png'
 
 const Footer = () => {
   return (
-    // <footer className="bg-dark text-white pt-5 pb-3">
-    //   <Container>
-    //     <Row>
-    //       <Col md={4} className="mb-4">
-    //         <h5>About Sehat ki Pathshala</h5>
-    //         <p>
-    //           Empowering individuals to become certified health and wellness coaches,
-    //           making a positive impact on people's lives through holistic wellness education.
-    //         </p>
-    //       </Col>
-    //       <Col md={3} className="mb-4">
-    //         <h5>Quick Links</h5>
-    //         <ul className="list-unstyled">
-    //           <li><a href="/" className="text-white">Home</a></li>
-    //           <li><a href="/about" className="text-white">About Us</a></li>
-    //           <li><a href="/courses" className="text-white">Our Courses</a></li>
-    //           <li><a href="/contact" className="text-white">Contact</a></li>
-    //         </ul>
-    //       </Col>
-    //       <Col md={5} className="mb-4">
-    //         <h5>Contact Info</h5>
-    //         <ul className="list-unstyled">
-    //           <li className="mb-2 d-flex align-items-center">
-    //             <FontAwesomeIcon icon={faLocationDot} className="me-2" />
-    //             41 A, Ashish Nagar Garden, Bengali Square, Indore - 452016
-    //           </li>
-    //           <li className="mb-2 d-flex align-items-center">
-    //             <FontAwesomeIcon icon={faPhone} className="me-2" />
-    //             +91 9074010119
-    //           </li>
-    //           <li className="mb-2 d-flex align-items-center">
-    //             <FontAwesomeIcon icon={faPhone} className="me-2" />
-    //             +91 8718810605
-    //           </li>
-    //           <li className="mb-2 d-flex align-items-center">
-    //             <FontAwesomeIcon icon={faEnvelope} className="me-2" />
-    //             xyz@gmail.com
-    //           </li>
-    //         </ul>
-    //       </Col>
-    //     </Row>
-    //     <hr />
-    //     <Row>
-    //       <Col md={10} className="text-center text-md-start">
-    //         <p className="mb-0">&copy; 2024 Sehat ki Pathshala. All rights reserved.</p>
-    //       </Col>
-    //       <Col md={2} className="d-flex justify-content-end">
-    //         <a href="#" className="text-white">
-    //           <FontAwesomeIcon icon={faFacebookF} />
-    //         </a>
-    //         <a href="#" className="text-white">
-    //           <FontAwesomeIcon icon={faTwitter} />
-    //         </a>
-    //         <a href="#" className="text-white">
-    //           <FontAwesomeIcon icon={faInstagram} />
-    //         </a>
-    //         <a href="#" className="text-white">
-    //           <FontAwesomeIcon icon={faLinkedinIn} />
-    //         </a>
-    //       </Col>
-    //     </Row>
-    //   </Container>
-    // </footer>
-      <footer style={{ backgroundColor: "#1a1a1a", color: "#fff", padding: "40px 0" }}>
+    <footer style={{ background: '#000', padding: '40px 10px' }}>
       <Container>
-        <Row>
-          {/* About Us */}
-          <Col md={4} className="mb-4">
-            <h5>About Sehat Ki Pathshala</h5>
-            <p style={{ fontSize: "16px" }}>
-              We are committed to promoting wellness and holistic living through expert guidance, engaging content, and a supportive community.
-            </p>
-          </Col>
+        <Row className="mb-4 align-items-center">
 
-          {/* Quick Links */}
-          <Col md={3} className="mb-4">
-            <h5>Quick Links</h5>
-            <ul style={{ listStyle: "none", padding: 0, fontSize: "16px" }}>
-              <li><a href="/" style={{ color: "#ccc", textDecoration: "none" }}>Home</a></li>
-              <li><a href="/about" style={{ color: "#ccc", textDecoration: "none" }}>About</a></li>
-              <li><a href="/results" style={{ color: "#ccc", textDecoration: "none" }}>Results</a></li>
-              <li><a href="/contact" style={{ color: "#ccc", textDecoration: "none" }}>Contact</a></li>
+          <Col md={4}>
+            <Image src={Logo} style={{width:'180px'}}/>
+          </Col>
+        
+          <Col md={4} className="">
+            <ul className='list-unstyled'>
+              <h5>Links</h5>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/results">Results</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </Col>
 
-          {/* Contact Info */}
-          {/* <Col md={5} className="mb-4">
-            <h5>Contact Info</h5>
-            <div className='d-flex align-items-center'>
-              <FontAwesomeIcon icon={faLocationDot} style={{ marginRight: 8 }} />
-              <p>Inquire@weljii.com</p>
-            </div>
-            <div className='d-flex align-items-center'>
-              <FontAwesomeIcon icon={faPhone} style={{ marginRight: 8 }} />
-              <p>+91 9074010119, +91 8718810605</p>
-            </div>
-            <div className='d-flex align-items-center'>
-              <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: 8 }} />
-              <p>Inquire@weljii.com</p>
-            </div>
-          </Col> */}
-          <Col md={5} className="">
-  <h5>Contact Info</h5>
-
-  <div className="d-flex align-items-center mb-2">
-    <FontAwesomeIcon icon={faLocationDot} style={{ marginRight: 0 }} />
-    <span className="m-0">New Delhi, India</span>
-  </div>
-
-  <div className="d-flex align-items-center mb-2">
-    <FontAwesomeIcon icon={faPhone} style={{ marginRight: 0 }} />
-    <span className="m-0">+91 9074010119, +91 8718810605</span>
-  </div>
-
-  <div className="d-flex align-items-center mb-2">
-    <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: 0 }} />
-    <span className="m-0">Inquire@weljii.com</span>
-  </div>
-</Col>
+          <Col md={4} className="">
+            <ul className='list-unstyled'>
+              <h5>Info:</h5>
+              <li><FontAwesomeIcon className='icon' icon={faPhone}/><a href="tel: +918718810605">8718810605</a></li>
+              <li><FontAwesomeIcon className='icon' icon={faPhone}/><a href="tel: +919074010119">9074010119</a></li>
+              <li><FontAwesomeIcon className='icon' icon={faEnvelope}/><a href="mailto:sehatkipathshala@gmail.com">sehatkipathshala@gmail.com</a></li>
+              <li><FontAwesomeIcon className='icon' icon={faLocation}/><a href="https://maps.app.goo.gl/bCCQKPrvQRG84g7w6" target="_blank">41 A, Ashish Nagar Garden, Bengali Square, Indore - 452016</a></li>
+            </ul>
+          </Col>
 
         </Row>
-        <hr style={{ borderColor: "#444" }} />
-         <Row>
-           <Col md={10} className="text-center text-md-start">
-             <p className="mb-0">&copy; 2024 Sehat ki Pathshala. All rights reserved.</p>
-           </Col>
-           <Col md={2} className="d-flex justify-content-end">
-             <a href="#" className="text-white">
-               <FontAwesomeIcon icon={faFacebookF} />
-             </a>
-             <a href="#" className="text-white">
-               <FontAwesomeIcon icon={faTwitter} />
-             </a>
-             <a href="#" className="text-white">
-               <FontAwesomeIcon icon={faInstagram} />
-             </a>
-             <a href="#" className="text-white">
-               <FontAwesomeIcon icon={faLinkedinIn} />
-             </a>
-           </Col>
-         </Row>
+        <hr />
+        <Row className='mt-4'>
+          <Col md={6} className="">
+            <div className='copy'>
+              &copy; {new Date().getFullYear()} SEHAT KI PATHSHALA. All rights reserved.
+            </div>
+          </Col>
+          <Col md={4} className="text-md-end">
+            <a href="https://www.instagram.com/indore_ins_theatre_/?hl=en" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} className='icon'/></a>
+            <a href="https://www.facebook.com/search/top?q=%E0%A4%87%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A4%A4%E0%A5%80%20%E0%A4%A8%E0%A4%BE%E0%A4%9F%E0%A5%8D%E0%A4%AF%20%E0%A4%B8%E0%A4%AE%E0%A4%BF%E0%A4%A4%E0%A4%BF%20%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A5%80" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} className='icon'/></a>
+            <a href="https://www.youtube.com/@INSSIDHI" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} className='icon'/></a>
+          </Col>
+        </Row>
       </Container>
     </footer>
   );
-};
+} 
 
-export default Footer; 
+export default Footer

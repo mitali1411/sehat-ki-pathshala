@@ -13,7 +13,7 @@ import Header from './components/Header';
 function App() {
   return (
     <Router>
-      <div className="App" style={{ maxWidth: '100%', margin: 0, padding: 0 }}>
+      {/* <div className="App"> */}
         <Header/>
         <Navbar />
         <Routes>
@@ -24,7 +24,7 @@ function App() {
         </Routes>
         <Footer />
         <Sticky/>
-      </div>
+      {/* </div> */}
     </Router>
   );
 }

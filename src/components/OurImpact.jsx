@@ -13,7 +13,7 @@ const OurImpact = () => {
     <div>
       <Container>
         <div className="text-center mt-5 pt-5">
-          <h2 className="mb-5">Our Impact</h2>
+          <h2 className="mb-5">Why Choose Us?</h2>
           <Row>
             {counter.map((item, index) => 
             <Col md={3} className="mb-4" key={index}>
